@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <title>Đang chuyển hướng...</title>
   <script>
-    const shopeeLinks = [
-      'https://s.shopee.vn/7fMjK2a0oa',
-      'https://s.shopee.vn/1g5bjfWohj', 
-      'https://s.shopee.vn/2LLIXB0wMs', 
-      'https://s.shopee.vn/8AJ5TuZeee',
-      'https://s.shopee.vn/9pRJT3sEqH',
-      'https://s.shopee.vn/6fUHhKAjK6'
-      // thêm link khác nếu bạn muốn
-    ];
+  const shopeeLinks = [
+    'https://s.shopee.vn/7fMjK2a0oa',
+    'https://s.shopee.vn/1g5bjfWohj',
+    'https://s.shopee.vn/2LLIXB0wMs',
+    'https://s.shopee.vn/8AJ5TuZeee',
+    'https://s.shopee.vn/9pRJT3sEqH',
+    'https://s.shopee.vn/6fUHhKAjK6'
+  ];
 
-    window.onload = function() {
-      const randomIndex = Math.floor(Math.random() * shopeeLinks.length);
-      const randomLink = shopeeLinks[randomIndex];
-      window.location.href = randomLink; // tự động chuyển
-    }
-  </script>
+  window.onload = function() {
+    const randomIndex = Math.floor(Math.random() * shopeeLinks.length);
+    const randomLink = shopeeLinks[randomIndex];
+    const newTab = window.open('about:blank', '_blank');
+    newTab.location = randomLink;
+  };
+</script>
 </head>
 <body>
   <h2>Đang chuyển...</h2>
